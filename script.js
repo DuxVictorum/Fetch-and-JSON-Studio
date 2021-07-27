@@ -18,9 +18,16 @@ window.addEventListener("load", event => {
                     </div>
                     <img class="avatar" src="${json[i].picture}">
                 </div>`
-
-            }
+                }
             
+            const actives = document.querySelectorAll("li");
+            for (bits of actives) {
+                if (bits.innerText === "Active: true") {
+                    bits.setAttribute("style", "color: green");
+                };
+            };
+
+            document.getElementById("astroCount").innerText += json.length;
         })
     })
 })
