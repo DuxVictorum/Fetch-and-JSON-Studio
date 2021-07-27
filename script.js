@@ -1,6 +1,7 @@
 window.addEventListener("load", event => {
     fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(response => {
         response.json().then(json => {
+            json.sort( (a,b) => {return b.hoursInSpace - a.hoursInSpace});
             console.log(json);
             const con = document.getElementById("container");
             
